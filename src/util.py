@@ -2,6 +2,7 @@
 Simple functions to test the CI/CD Actions
 """
 
+
 def addition(number_x, number_y):
     """
     Add two numbers together.
