@@ -11,29 +11,35 @@ See: [python-package.yml](.github/workflows/python-package.yml)
 [How to build a CI/CD pipeline with GitHub Actions in four simple steps](https://github.blog/2022-02-02-build-ci-cd-pipeline-github-actions-four-steps/)
 
 # Pipeline
-Static analysis
 
+Install dependencies
 ```shell
-# pip install pylint
+pip install --upgrade pip
+pip install pylint pytest pyinstaller
+pip install -r requirements.txt
+```
+
+Static analysis
+```shell
 pylint $(git ls-files '*.py')
 ```
 
 Testing
 
 ```shell
-# pip install pytest
 pytest
 ```
+
+# How to use
 
 Run Python 
 ```shell
 python src/main.py --number_x 40 --number_y 2 
 ```
 
-Create Binary
+Create Binary (Linux)
 
 ```shell
-# pip install pyinstaller
 pyinstaller --onefile src/main.py
 ```
 
