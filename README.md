@@ -1,33 +1,38 @@
 # CI/CD with GitHub Actions
 
+> Why spend 5 minutes doing something ...
+> when you could spend 5 hours failing to automate it?
+
+
 See: [python-package.yml](.github/workflows/python-package.yml)
 
-# Links
+# Guide
 
 [How to build a CI/CD pipeline with GitHub Actions in four simple steps](https://github.blog/2022-02-02-build-ci-cd-pipeline-github-actions-four-steps/)
 
-# Static analysis
+# Pipeline
+Static analysis
 
 ```shell
 # pip install pylint
 pylint $(git ls-files '*.py')
 ```
 
-# Testing
+Testing
 
 ```shell
 # pip install pytest
 pytest
 ```
 
-# Create Binary
+Create Binary
 
 ```shell
 # pip install pyinstaller
 pyinstaller --onefile src/main.py
 ```
 
-# Run Binary
+Run Binary
 
 ```shell
 ./dist/main
