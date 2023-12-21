@@ -25,6 +25,11 @@ Testing
 pytest
 ```
 
+Run Python 
+```shell
+python src/main.py --number_x 40 --number_y 2 
+```
+
 Create Binary
 
 ```shell
@@ -35,5 +40,6 @@ pyinstaller --onefile src/main.py
 Run Binary
 
 ```shell
-./dist/main
+# ./dist/main --help
+ ./dist/main --number_x 40 --number_y 2  # -> x=40.0 + y=2.0 == 42.0
 ```
